@@ -78,6 +78,14 @@ my-blog/
   - 예: `python -m http.server 8000` 후 `http://localhost:8000` 접속, 또는 VS Code Live Server.
 - 변경 후에는 데스크톱과 모바일 폭 모두에서, 그리고 라이트/다크 모드 모두에서 확인한다.
 
+## 배포 (GitHub Pages)
+
+- 저장소: https://github.com/limzeon/my-blog , 배포 주소: https://limzeon.github.io/my-blog/
+- `master` 브랜치 루트(`/`)를 그대로 GitHub Pages 소스로 사용한다. 별도 빌드 단계 없음.
+- 저장소 루트에 **`.nojekyll` 파일이 반드시 있어야 한다.** 이게 없으면 GitHub Pages가
+  Jekyll로 파일을 처리하면서 `posts/*.md` 원본이 변환되어 `fetch`가 깨진다.
+- `master`에 푸시하면 자동으로 재배포된다.
+
 ## 새 글 추가 절차
 
 1. `posts/`에 `<slug>.md` 파일을 만들고 상단에 프론트매터를 작성한다:
